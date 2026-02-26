@@ -74,13 +74,13 @@ export function Contact() {
 
                     {status === "success" && (
                         <div className="mb-6 p-4 bg-green-500/20 border border-green-500/50 rounded-lg text-green-200 text-center">
-                            ✅ Message sent successfully!
+                            Message sent successfully!
                         </div>
                     )}
 
                     {status === "error" && (
                         <div className="mb-6 p-4 bg-red-500/20 border border-red-500/50 rounded-lg text-red-200 text-center">
-                            ❌ Something went wrong. Please try again.
+                            Something went wrong. Please try again.
                         </div>
                     )}
 
@@ -114,10 +114,11 @@ export function Contact() {
                             value={formData.serviceType}
                             onChange={handleChange}
                             required
-                            className="w-full bg-black/20 border border-white/10 rounded-lg px-4 py-3 text-white"
+                            className="w-full border border-white/10 rounded-lg px-4 py-3 text-white bg-gray-950"
                         >
                             <option>Shopify Theme Development</option>
                             <option>Shopify App Development</option>
+                            <option>Custom Functionality</option>
                             <option>Fix Issue</option>
                             <option>Other</option>
                         </select>

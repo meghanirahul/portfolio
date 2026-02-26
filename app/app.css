@@ -54,12 +54,20 @@ body {
   --color-text-gradient: linear-gradient(180deg, rgba(253, 255, 161, 1) 25%, rgba(255, 225, 161, 1) 50%, rgba(255, 192, 161, 1) 75%);
 }
 
+/* Outer wrapper — full-viewport height, pinned by ScrollTrigger */
+.banner-scroll-wrapper {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Inner strip — slides horizontally via GSAP transform */
 .banner-scroll-container {
   display: flex;
   width: fit-content;
-  height: 100vh;
-  padding-top: 122px;
-  margin-top: -122px;
+  height: 100%;
+  will-change: transform;
 }
 
 .banner_index {
@@ -161,11 +169,6 @@ body {
   .logondev {
     margin: 0;
     padding: 6px;
-  }
-
-  .banner-scroll-container {
-    padding-top: 94px;
-    margin-top: -94px;
   }
 
   .position-border {
